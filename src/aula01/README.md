@@ -16,6 +16,6 @@ informada ao jogador, adicionalmente pode tornar um jogador suspenso.
 - cumprirSuspencao(): void – Esse método vai zerar a quantidade de
 cartões e tornar o jogador apto a jogar
 
-- sofrerLesao(): void – Este método vai gerar aleatoriamente um lesão no jogador. A gravidade da lesão irá se refletir em uma redução da qualidade do jogador, quanto mais grave maior a redução da qualidade. Crie uma escala de redução de no mínimo 1 ponto até o máximo de 15% da qualidade total do jogador. Note que a qualidade jamais pode ficar negativa. A tabela abaixo pode ser utilizada como referência:
+- sofrerLesao(): void – Este método vai gerar aleatoriamente um lesão no jogador. A gravidade da lesão irá se refletir em uma redução da qualidade do jogador, quanto mais grave maior a redução da qualidade. Crie uma escala de redução de no mínimo 1 ponto até o máximo de 15% da qualidade total do jogador. Note que a qualidade jamais pode ficar negativa.
 
 - executarTreinamento(): void – A exemplo do método anterior, este método vai aumentar a qualidade do jogador aleatoriamente em um número entre 1 e 3. Note que só pode ser executado 1 treinamento antes de cada partida (você deve adicionar um atributo na classe para poder controlar essa informação).
