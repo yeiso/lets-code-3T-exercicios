@@ -29,9 +29,6 @@ public class Aula01 {
         Jogador jogador11 = new Jogador(11, "Brett Pierce", "Chili", LocalDate.of(1989,8,28), 11, "Atacante",  0, 0);
         time.jogadores.add(jogador11);
 
-
-        //System.out.println(time.listaTime());
-
         System.out.println(jogador1.infoJogador());
         jogador1.executarTreinamento();
         jogador1.descansar();
@@ -39,5 +36,7 @@ public class Aula01 {
         System.out.println(jogador1.infoJogador());
         jogador1.sofrerLesao();
         System.out.println(jogador1.infoJogador());
+
+        System.out.println(time.listaTime());
     }
 }
