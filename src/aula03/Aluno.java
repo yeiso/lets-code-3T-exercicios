@@ -1,27 +1,33 @@
 package aula03;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class Aluno extends Pessoa {
 
-    String turma;
+    Turma turma;
     Map<disciplina, Notas> notasPorMateria = new HashMap<>();
 
-    public Aluno(String nome, String cpf, String rg, String turma) {
+    public Aluno(String nome, String cpf, String rg, Turma turma) {
         super(nome, cpf, rg);
         this.turma = turma;
     }
 
-    public Map<disciplina, Notas> getNotasPorMateria() {
-        return notasPorMateria;
+    public void imprimirMedia(){
+        System.out.println("ALUNO: " + this.getNome());
+        Set materias = this.notasPorMateria.keySet();
+        for (Object materia: materias) {
+            OptionalDouble media = Arrays.stream(this.notasPorMateria.get(materia).notas).average();
+            System.out.printf("%-10s - Media: %.2f %n", materia, media.getAsDouble());
+        }
     }
 
-    public void setNotasPorMateria(Map<disciplina, Notas> notasPorMateria) {
-        this.notasPorMateria = notasPorMateria;
+    void addNotas(disciplina disciplina, double nota1, double nota2, double nota3){
+        this.notasPorMateria.put(disciplina, new Notas(nota1, nota2, nota3));
     }
 
-    public void addNotasPorMateria(Map<disciplina, Notas> notasPorMateria){
-        this.notasPorMateria.put(<disciplina, Notas>);
+    @Override
+    public String toString() {
+        return super.toString() + this.turma.getTurma();
     }
+
 }
