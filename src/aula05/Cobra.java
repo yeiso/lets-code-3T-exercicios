@@ -1,10 +1,10 @@
 package aula05;
 
-public class Vampiro extends Inimigo {
+public class Cobra extends Inimigo{
 
-    public Vampiro() {
-        this.vida = 100;
-        this.fraqueza = tipoAtaque.PERFURANTE;
+    public Cobra(){
+      this.vida = 50;
+      this.fraqueza = tipoAtaque.PERFURANTE;
     }
 
     @Override
@@ -21,6 +21,7 @@ public class Vampiro extends Inimigo {
 
     @Override
     void interagir() {
-        System.out.println("O que é um homem?");
+        System.out.println("Se você acender a chama a maldição acaba.");
     }
+
 }
