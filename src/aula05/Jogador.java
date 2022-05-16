@@ -33,4 +33,8 @@ public class Jogador extends Personagem{
     public status getStatus() {
         return status;
     }
+
+    public String getNome() {
+        return nome;
+    }
 }

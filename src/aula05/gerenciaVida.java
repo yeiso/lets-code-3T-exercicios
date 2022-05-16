@@ -24,7 +24,7 @@ public class gerenciaVida {
                 }
             }
             if(!((Jogador) personagem).getStatus().equals(status.NORMAL)) {
-                System.out.println("SEU STATUS E " + ((Jogador) personagem).getStatus());
+                System.out.println(((Jogador) personagem).getNome() + " STATUS: " + ((Jogador) personagem).getStatus());
             }
         }
 

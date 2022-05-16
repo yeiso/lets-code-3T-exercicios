@@ -1,6 +1,6 @@
 package aula05;
 
-public class aula05 {
+public class Aula05 {
     public static void main(String[] args) {
 
         Jogador jogador1 = new Jogador("Tester");
