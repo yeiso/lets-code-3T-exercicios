@@ -4,13 +4,15 @@ public class Vampiro extends Inimigo {
 
     public Vampiro() {
         this.vida = 100;
-        this.fraqueza = tipoAtaque.PERFURANTE;
+        this.forcaAtaque = 20;
+        this.tipoAtaque = aula05.tipoAtaque.PERFURANTE;
+        this.fraqueza = aula05.tipoAtaque.PERFURANTE;
     }
 
     @Override
-    void atacar(int danoAtaque, tipoAtaque tipoAtaque, Personagem personagem) {
-        gerenciaVida.calcularDano(danoAtaque, tipoAtaque.VENENO, personagem);
-        System.out.println("Causou "+ danoAtaque +" de dano!");
+    void atacar(Personagem personagem) {
+        gerenciaVida.calcularDano(this.forcaAtaque, this.tipoAtaque , personagem);
+        System.out.println("Vampiro causou "+ this.forcaAtaque +" de dano!");
     }
 
     @Override

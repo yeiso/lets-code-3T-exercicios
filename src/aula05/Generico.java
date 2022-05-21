@@ -4,13 +4,15 @@ public class Generico extends Inimigo {
 
     public Generico() {
         this.vida = 50;
+        this.forcaAtaque = 10;
+        this.tipoAtaque = aula05.tipoAtaque.NORMAL;
         this.fraqueza = null;
     }
 
     @Override
-    void atacar(int danoAtaque, tipoAtaque tipoAtaque, Personagem personagem) {
-        gerenciaVida.calcularDano(danoAtaque, tipoAtaque.NORMAL, personagem);
-        System.out.println("Causou "+ danoAtaque +" de dano!");
+    void atacar(Personagem personagem) {
+        gerenciaVida.calcularDano(this.forcaAtaque, this.tipoAtaque , personagem);
+        System.out.println("Generico causou "+ this.forcaAtaque +" de dano!");
     }
 
     @Override

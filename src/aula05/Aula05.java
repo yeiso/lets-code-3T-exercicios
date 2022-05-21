@@ -9,8 +9,8 @@ public class Aula05 {
         Vampiro vampiro1 = new Vampiro();
         Generico generico1 = new Generico();
 
-        jogador1.atacar(20, tipoAtaque.FOGO, cobra1);
-        gigante1.atacar(30, tipoAtaque.PANCADA, jogador1);
-        System.out.println(jogador1.getVida());
+        jogador1.atacar(cobra1);
+        gigante1.atacar(jogador1);
+
     }
 }

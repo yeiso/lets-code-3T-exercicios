@@ -3,11 +3,14 @@ package aula05;
 public class gerenciaVida {
 
     static void calcularDano(int dano, tipoAtaque tipoAtaque, Personagem personagem){
-        if (personagem.getFraqueza() != null && personagem.getFraqueza().equals(tipoAtaque)){
+        tipoAtaque fraqueza = personagem.getFraqueza();
+        int vida = personagem.getVida();
+
+        if (fraqueza != null && fraqueza.equals(tipoAtaque)){
             System.out.println("Ataque critico. Dano dobrado!");
-            personagem.setVida(personagem.getVida() - (dano * 2));
+            personagem.setVida(vida - (dano * 2));
         } else {
-            personagem.setVida(personagem.getVida() - dano);
+            personagem.setVida(vida - dano);
         }
         estaVivo(personagem);
 

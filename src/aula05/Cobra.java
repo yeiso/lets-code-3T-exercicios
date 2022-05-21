@@ -4,13 +4,15 @@ public class Cobra extends Inimigo{
 
     public Cobra(){
       this.vida = 50;
-      this.fraqueza = tipoAtaque.PERFURANTE;
+      this.forcaAtaque = 10;
+      this.tipoAtaque = aula05.tipoAtaque.VENENO;
+      this.fraqueza = aula05.tipoAtaque.PERFURANTE;
     }
 
     @Override
-    void atacar(int danoAtaque, tipoAtaque tipoAtaque, Personagem personagem) {
-        gerenciaVida.calcularDano(danoAtaque, tipoAtaque.VENENO, personagem);
-        System.out.println("Causou "+ danoAtaque +" de dano!");
+    void atacar(Personagem personagem) {
+        gerenciaVida.calcularDano(this.forcaAtaque, this.tipoAtaque , personagem);
+        System.out.println("Cobra causou "+ this.forcaAtaque +" de dano!");
     }
 
     @Override

@@ -4,13 +4,15 @@ public class Gigante extends Inimigo {
 
     public Gigante() {
         this.vida = 300;
-        this.fraqueza = tipoAtaque.FOGO;
+        this.forcaAtaque = 25;
+        this.tipoAtaque = aula05.tipoAtaque.PANCADA;
+        this.fraqueza = aula05.tipoAtaque.FOGO;
     }
 
     @Override
-    void atacar(int danoAtaque, tipoAtaque tipoAtaque, Personagem personagem) {
-        gerenciaVida.calcularDano(danoAtaque, tipoAtaque.PANCADA, personagem);
-        System.out.println("Causou "+ danoAtaque +" de dano!");
+    void atacar(Personagem personagem) {
+        gerenciaVida.calcularDano(this.forcaAtaque, this.tipoAtaque , personagem);
+        System.out.println("Gigante causou "+ this.forcaAtaque +" de dano!");
     }
 
     @Override

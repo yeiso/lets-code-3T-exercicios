@@ -8,13 +8,15 @@ public class Jogador extends Personagem{
     public Jogador(String nome){
         this.nome = nome;
         this.vida = 150;
-        this.status = status.NORMAL;
+        this.forcaAtaque = 20;
+        this.tipoAtaque = aula05.tipoAtaque.NORMAL;
+        this.status = aula05.status.NORMAL;
         this.fraqueza = null;
     }
 
     @Override
-    void atacar(int danoAtaque, tipoAtaque tipoAtaque, Personagem personagem) {
-        gerenciaVida.calcularDano(danoAtaque, tipoAtaque, personagem);
+    void atacar(Personagem personagem) {
+        gerenciaVida.calcularDano(this.forcaAtaque, this.tipoAtaque, personagem);
     }
 
     @Override
@@ -28,6 +30,10 @@ public class Jogador extends Personagem{
 
     protected void setFraqueza(tipoAtaque fraqueza) {
         this.fraqueza = fraqueza;
+    }
+
+    protected void setTipoAtaque(tipoAtaque tipoAtaque) {
+        this.tipoAtaque = tipoAtaque;
     }
 
     public status getStatus() {
