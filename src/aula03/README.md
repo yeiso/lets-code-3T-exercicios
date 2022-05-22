@@ -1,33 +1,33 @@
-#Exercício de Cadastro em Escola
+# Exercício de Cadastro em Escola
 O intuito do exercício a seguir é treinar e fixar os conceitos de classes, métodos, acesso e principalmente herança.
 
-##O Exercício
+## O Exercício
 Você deve implementar um sistema básico de cadastro em escola sendo possível cadastra aluno, professor e funcionário.
 
-##Regras de Implementação
+## Regras de Implementação
 A escola deve ter 3 tipos de registro: professor, aluno e funcionário.
--Um funcionário deve ter os atributos:
---Nome
---CPF
---RG
---Cargo
---Salário
+- Um funcionário deve ter os atributos:
+-- Nome
+-- CPF
+-- RG
+-- Cargo
+-- Salário
 
--Um aluno deve ter os atributos
---Nome
---CPF
---RG
---Idade
---Turma
---Notas por disciplina
+- Um aluno deve ter os atributos
+-- Nome
+-- CPF
+-- RG
+-- Idade
+-- Turma
+-- Notas por disciplina
 
--Um professor deve ter os atributos
---Nome
---CPF
---RG
---Turmas
---Salário
---Disciplinas
+- Um professor deve ter os atributos
+-- Nome
+-- CPF
+-- RG
+-- Turmas
+-- Salário
+-- Disciplinas
 
 - O sistema deve ter métodos para adicionar um aluno, funcionário e professor.
 - O sistema deve ter métodos para modificar um aluno, funcionário e professor.
@@ -36,7 +36,7 @@ A escola deve ter 3 tipos de registro: professor, aluno e funcionário.
 - O sistema deve ter métodos para exibir os dados de um um aluno, funcionário ou professor específico.
 - O sistema deve ter métodos para calcular a média de notas do aluno.
 - 
-##Dicas finais
+## Dicas finais
 - Sempre tente entender como pode utilizar herança para reutilizar o máximo possível de códigos.
 - Apesar de o usuário não poder ter acesso, utilize métodos de apoio dentro das classes para facilitar seu trabalho, limpeza e manutenção do seu código!
 - Crie quantas classes, variáveis e métodos achar necessários para executar exercício.
