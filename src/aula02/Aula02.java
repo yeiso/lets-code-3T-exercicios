@@ -17,9 +17,5 @@ public class Aula02 {
         estoque1.removeProduto(produto3);
         estoque1.listaProdutos();
 
-
-
-
-
     }
 }

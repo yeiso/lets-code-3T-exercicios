@@ -3,13 +3,13 @@ package aula02;
 public class Produto {
 
     static private int nextId = 0;
-    private int id;
+    protected int id;
     private String nome;
     private int quantidade;
     private String tipo;
     private String marca;
-    private Enum<sessao> sessaoProduto;
-    private Estoque estoqueProduto;
+    protected Enum<sessao> sessaoProduto;
+    protected Estoque estoqueProduto;
 
     public Produto(String nome, int quantidade, String tipo, String marca, Enum<sessao> sessaoProduto, Estoque estoqueProduto) {
         this.id = nextId;

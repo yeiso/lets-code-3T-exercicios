@@ -7,7 +7,7 @@ class Estoque {
 
     static private int nextId = 0;
     public String nome;
-    private List<Produto> produtos = new ArrayList<>();
+    protected List<Produto> produtos = new ArrayList<>();
     int id;
 
     public Estoque(String nome) {
