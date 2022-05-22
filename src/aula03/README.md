@@ -7,27 +7,27 @@ Você deve implementar um sistema básico de cadastro em escola sendo possível 
 ## Regras de Implementação
 A escola deve ter 3 tipos de registro: professor, aluno e funcionário.
 - Um funcionário deve ter os atributos:
--- Nome
--- CPF
--- RG
--- Cargo
--- Salário
+  - Nome
+  - CPF
+  - RG
+  - Cargo
+  - Salário
 
 - Um aluno deve ter os atributos
--- Nome
--- CPF
--- RG
--- Idade
--- Turma
--- Notas por disciplina
+  - Nome
+  - CPF
+  - RG
+  - Idade
+  - Turma
+  - Notas por disciplina
 
 - Um professor deve ter os atributos
--- Nome
--- CPF
--- RG
--- Turmas
--- Salário
--- Disciplinas
+  - Nome
+  - CPF
+  - RG
+  - Turmas
+  - Salário
+  - Disciplinas
 
 - O sistema deve ter métodos para adicionar um aluno, funcionário e professor.
 - O sistema deve ter métodos para modificar um aluno, funcionário e professor.
