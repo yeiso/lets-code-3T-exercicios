@@ -7,16 +7,15 @@ public class Aluno extends Pessoa {
     Turma turma;
     Map<disciplina, Notas> notasPorMateria = new HashMap<>();
 
-    public Aluno(String nome, String cpf, String rg, Turma turma) {
+    public Aluno(String nome, String cpf, String rg) {
         super(nome, cpf, rg);
-        this.turma = turma;
     }
 
     public void imprimirMedia(){
         System.out.println("ALUNO: " + this.getNome());
-        Set materias = this.notasPorMateria.keySet();
+        Set<disciplina> materias = this.notasPorMateria.keySet();
         for (Object materia: materias) {
-            OptionalDouble media = Arrays.stream(this.notasPorMateria.get(materia).notas).average();
+            var media = Arrays.stream(this.notasPorMateria.get(materia).notas).average();
             System.out.printf("%-10s - Media: %.2f %n", materia, media.getAsDouble());
         }
     }
@@ -27,7 +26,7 @@ public class Aluno extends Pessoa {
 
     @Override
     public String toString() {
-        return super.toString() + this.turma.getTurma();
+        return super.toString() + this.turma.toString();
     }
 
 }

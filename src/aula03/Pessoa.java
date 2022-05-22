@@ -1,10 +1,10 @@
 package aula03;
 
-public class Pessoa {
+public abstract class Pessoa {
 
-   private String nome;
-   private String cpf;
-   private String rg;
+    protected String nome;
+    protected String cpf;
+    protected String rg;
 
     public Pessoa(String nome, String cpf, String rg) {
         this.nome = nome;

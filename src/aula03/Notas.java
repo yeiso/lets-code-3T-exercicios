@@ -1,6 +1,7 @@
 package aula03;
 
 public class Notas {
+
     protected double[] notas = new double[3];
 
     public Notas(double nota1, double nota2, double nota3) {

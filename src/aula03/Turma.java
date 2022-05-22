@@ -8,11 +8,11 @@ import static java.util.Collections.*;
 
 public class Turma {
 
-    private int ano;
-    private char classe;
-    private int sala;
-    private List<Aluno> alunos = new ArrayList<>();
-    private List<Professor> professores = new ArrayList<>();
+    protected int ano;
+    protected char classe;
+    protected int sala;
+    protected List<Aluno> alunos = new ArrayList<>();
+    protected List<Professor> professores = new ArrayList<>();
 
     public Turma(int ano, char classe, int sala) {
         this.ano = ano;
@@ -34,8 +34,15 @@ public class Turma {
         }
     }
 
-    String getTurma(){
-        return " - Turma: " + this.ano + "-" + this.classe + " SALA: " + this.sala;
+    void listarProfessoresTurma(){
+        for (Professor professor: professores) {
+            System.out.println(professor.toString());
+        }
+    }
+
+    @Override
+    public String toString(){
+        return "- Turma: " + this.ano + "-" + this.classe + " SALA: " + this.sala;
     }
 
 }
