@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class PartyTable extends Table{
 
     int maxCardsOnTable;
-    ArrayList<BasicCard> cardsOnTable;
+    ArrayList<Card> cardsOnTable;
     ArrayList<Player> playersAlive = new ArrayList<>();
 
     public PartyTable(){
@@ -30,7 +30,7 @@ public class PartyTable extends Table{
     }
 
     @Override
-    public void canPlayThisCard(BasicCard card, Player player) {
+    public void playThisCard(Card card, Player player) {
         if (card.getCost() < player.getActionPoints() && cardsOnTable.size() < maxCardsOnTable){
             cardsOnTable.add(card);
         }

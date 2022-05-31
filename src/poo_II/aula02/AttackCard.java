@@ -1,6 +1,6 @@
 package poo_II.aula02;
 
-public class AttackCard extends BasicCard{
+public class AttackCard extends Card {
 
     private int power;
     private int resistence;

@@ -1,6 +1,6 @@
 package poo_II.aula02;
 
-public class EnchantmentCard extends BasicCard{
+public class EnchantmentCard extends Card {
 
     int roundsDuration;
     int powerModFactor;

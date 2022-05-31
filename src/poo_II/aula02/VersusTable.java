@@ -4,7 +4,10 @@ import java.util.ArrayList;
 
 public class VersusTable extends Table {
 
-    ArrayList<BasicCard> playersCardOnTable = new ArrayList<>();
+    ArrayList<Card> AttackCardsPlayer0 = new ArrayList<>();
+    ArrayList<Card> SpecialAttackCardsPlayer0 = new ArrayList<>();
+    ArrayList<Card> AttackCardsPlayer1 = new ArrayList<>();
+    ArrayList<Card> SpecialAttackCardsPlayer1 = new ArrayList<>();
 
     public VersusTable(){
         this.deckSize = 50;
@@ -26,8 +29,22 @@ public class VersusTable extends Table {
     }
 
     @Override
-    public void canPlayThisCard(BasicCard card, Player player) {
+    public void playThisCard(Card card, Player player) {
+        if (player.getId() == 0){
+            if (card instanceof SpecialAttackCard && SpecialAttackCardsPlayer0.size() < 2) {
+                SpecialAttackCardsPlayer0.add(card);
+            } else if (!(card instanceof SpecialAttackCard) && AttackCardsPlayer0.size() < 5) {
+                AttackCardsPlayer0.add(card);
+            }
+        }
 
+        if (player.getId() == 1){
+            if (card instanceof SpecialAttackCard && SpecialAttackCardsPlayer1.size() < 2) {
+                SpecialAttackCardsPlayer1.add(card);
+            } else if (!(card instanceof SpecialAttackCard) && AttackCardsPlayer1.size() < 5) {
+                AttackCardsPlayer1.add(card);
+            }
+        }
     }
 
     @Override

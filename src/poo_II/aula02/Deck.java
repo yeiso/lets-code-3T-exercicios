@@ -6,9 +6,9 @@ import java.util.Collections;
 public class Deck {
 
     private int id;
-    protected ArrayList<BasicCard> cards;
+    protected ArrayList<Card> cards;
 
-    public Deck(int id, ArrayList<BasicCard> cards) {
+    public Deck(int id, ArrayList<Card> cards) {
         this.id = id;
         this.cards = cards;
     }
@@ -21,11 +21,11 @@ public class Deck {
         return id;
     }
 
-    public ArrayList<BasicCard> getCards() {
+    public ArrayList<Card> getCards() {
         return cards;
     }
 
-    public void setCards(ArrayList<BasicCard> cards) {
+    public void setCards(ArrayList<Card> cards) {
         this.cards = cards;
     }
 }

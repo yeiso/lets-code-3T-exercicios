@@ -8,4 +8,8 @@ public abstract class Table implements ITable{
     int deckSize;
     ArrayList<Deck> decks;
     ArrayList<Player> players;
+
+    @Override
+    public void playThisCard(Card card, Player player) {
+    }
 }

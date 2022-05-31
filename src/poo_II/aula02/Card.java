@@ -1,6 +1,6 @@
 package poo_II.aula02;
 
-public abstract class BasicCard {
+public abstract class Card {
 
     protected String name;
     protected int cost;
@@ -18,7 +18,7 @@ public abstract class BasicCard {
         return type;
     }
 
-    public BasicCard(String name, int cost, CardType type) {
+    public Card(String name, int cost, CardType type) {
         this.name = name;
         this.cost = cost;
         this.type = type;
