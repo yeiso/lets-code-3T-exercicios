@@ -32,6 +32,17 @@ class StockManager {
         }
     }
 
+    static void deleteItemFromStock(Stock stock, IItem item){
+
+        boolean productExists = stock.stockedItens.containsKey(item);
+
+        if(productExists) {
+            stock.stockedItens.remove(item);
+        } else {
+            System.out.println("ERROR: Requested Item doesn't exists in Stock ID: " + stock.getId());
+        }
+    }
+
     static void updateItemQuantity(Stock stock, IItem item, Integer quantity){
 
         boolean productExists = stock.stockedItens.containsKey(item);

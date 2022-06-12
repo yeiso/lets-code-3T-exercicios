@@ -15,6 +15,15 @@ public class MusicAlbum extends Item{
         this.label = label;
     }
 
+    protected void updateMusicAlbum(String name, double price, List<Band> bands, List<MusicGenre> genres, String label){
+        this.name = name;
+        this.price = price;
+        this.bands = bands;
+        this.genres = genres;
+        this.label = label;
+    }
+
+
     public List<Band> getBands() {
         return bands;
     }

@@ -15,6 +15,14 @@ public class Book extends Item{
         this.publisher = publisher;
     }
 
+    protected void updateBook(String name, double price, List<BookGenre> genres, List<People> writers, Publisher publisher){
+        this.name = name;
+        this.price = price;
+        this.genres = genres;
+        this.writers = writers;
+        this.publisher = publisher;
+    }
+
     public List<BookGenre> getGenres() {
         return genres;
     }

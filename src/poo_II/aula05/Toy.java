@@ -11,6 +11,12 @@ public class Toy extends Item{
         this.types = types;
     }
 
+    protected void updateToy(String name, double price, List<ToyType> types){
+        this.name = name;
+        this.price = price;
+        this.types = types;
+    }
+
     public List<ToyType> getTypes() {
         return types;
     }

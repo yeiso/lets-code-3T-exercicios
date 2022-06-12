@@ -15,6 +15,14 @@ public class VideoGame extends Item{
         this.genres = genres;
     }
 
+    protected void updateVideoGame(String name, double price, Distributor distributor, Studio studio, List<GameGenre> genres){
+        this.name = name;
+        this.price = price;
+        this.distributor = distributor;
+        this.studio = studio;
+        this.genres = genres;
+    }
+
     public Distributor getDistributor() {
         return distributor;
     }

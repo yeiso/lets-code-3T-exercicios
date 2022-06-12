@@ -17,6 +17,15 @@ public class Movie extends Item{
         this.genres = genres;
     }
 
+    protected void updateMovie(String name, double price, Studio studio, List<People> directors, List<People> producers, List<MovieGenre> genres){
+        this.name = name;
+        this.price = price;
+        this.studio = studio;
+        this.directors = directors;
+        this.producers = producers;
+        this.genres = genres;
+    }
+
     public Studio getStudio() {
         return studio;
     }
