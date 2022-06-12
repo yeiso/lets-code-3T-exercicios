@@ -14,14 +14,15 @@ public class Cashier {
         this.stocks = stocks;
     }
 
-    void sellItem(List<IItem> itemList, int stockId){
+    void sellItem(List<IItem> itemList, int stockId, Client client){
         Stock selectedStock = StockManager.findStock(stocks, stockId);
-
         if (selectedStock != null){
             for (IItem item: itemList ) {
-                if (StockManager.checkQuantityInStock(selectedStock, item) > 0){
-                    StockManager.removeItemFromStock(selectedStock, item, 1);
-                    setCashierMoney(getCashierMoney() + item.getPrice());
+                if (CashierManager.verifyAdultItem(item, client)){
+                    if (StockManager.checkQuantityInStock(selectedStock, item) > 0){
+                        StockManager.removeItemFromStock(selectedStock, item, 1);
+                        setCashierMoney(getCashierMoney() + item.getPrice());
+                    }
                 }
             }
         }

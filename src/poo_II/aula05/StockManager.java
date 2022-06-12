@@ -52,6 +52,15 @@ class StockManager {
         }
     }
 
+    static int checkQuantityInStock(Stock stock, IItem item){
+        boolean productExists = stock.stockedItens.containsKey(item);
+
+        if(productExists){
+            return stock.stockedItens.get(item);
+        }
+        return 0;
+    }
+
     static Stock findStock(List<Stock> stocks, int stockId){
         for (Stock stock: stocks) {
             if (stockId == stock.getId()){
@@ -61,14 +70,52 @@ class StockManager {
         return null;
     }
 
-    static int checkQuantityInStock(Stock stock, IItem item){
-        boolean productExists = stock.stockedItens.containsKey(item);
-
-        if(productExists){
-            return stock.stockedItens.get(item);
+    static void listItensInStock(Stock stock){
+        for (IItem item: stock.stockedItens.keySet()) {
+            System.out.println(item.toString() + " - Quantity: " + stock.stockedItens.get(item));
         }
-        return 0;
     }
+
+    static void listBooksInStock(Stock stock){
+        for (IItem item: stock.stockedItens.keySet()) {
+            if (item instanceof Book) {
+                System.out.println(item + " - Quantity: " + stock.stockedItens.get(item));
+            }
+        }
+    }
+
+    static void listMoviesInStock(Stock stock){
+        for (IItem item: stock.stockedItens.keySet()) {
+            if (item instanceof Movie) {
+                System.out.println(item + " - Quantity: " + stock.stockedItens.get(item));
+            }
+        }
+    }
+
+    static void listMusicAlbunsInStock(Stock stock){
+        for (IItem item: stock.stockedItens.keySet()) {
+            if (item instanceof MusicAlbum) {
+                System.out.println(item + " - Quantity: " + stock.stockedItens.get(item));
+            }
+        }
+    }
+
+    static void listToysInStock(Stock stock){
+        for (IItem item: stock.stockedItens.keySet()) {
+            if (item instanceof Toy) {
+                System.out.println(item + " - Quantity: " + stock.stockedItens.get(item));
+            }
+        }
+    }
+
+    static void listVideoGamesInStock(Stock stock){
+        for (IItem item: stock.stockedItens.keySet()) {
+            if (item instanceof VideoGame) {
+                System.out.println(item + " - Quantity: " + stock.stockedItens.get(item));
+            }
+        }
+    }
+
 
 
 

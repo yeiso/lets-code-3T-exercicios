@@ -1,6 +1,7 @@
 package poo_II.aula05;
 
 public enum MusicGenre {
+    ADULT,
     CLASSICAL,
     COUNTRY,
     ELETRONIC,
