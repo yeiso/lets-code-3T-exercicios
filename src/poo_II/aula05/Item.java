@@ -1,12 +1,12 @@
 package poo_II.aula05;
 
-public abstract class Item {
+public abstract class Item implements IItem{
 
     int id;
     String name;
     double price;
 
-    public Item(int id, String name, double price) {
+    Item(int id, String name, double price) {
         this.id = id;
         this.name = name;
         this.price = price;

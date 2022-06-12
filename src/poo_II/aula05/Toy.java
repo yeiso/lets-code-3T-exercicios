@@ -18,4 +18,14 @@ public class Toy extends Item{
     public void setTypes(List<ToyType> types) {
         this.types = types;
     }
+
+    @Override
+    public String toString() {
+        return "Toy{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", price=" + price +
+                ", types=" + types +
+                '}';
+    }
 }

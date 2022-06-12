@@ -6,7 +6,7 @@ public class Book extends Item{
 
     protected List<BookGenre> genres;
     protected List<People> writers;
-    private Publisher publisher;
+    protected Publisher publisher;
 
     public Book(int id, String name, double price, List<BookGenre> genres, List<People> writers, Publisher publisher) {
         super(id, name, price);
@@ -37,5 +37,17 @@ public class Book extends Item{
 
     public void setPublisher(Publisher publisher) {
         this.publisher = publisher;
+    }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "genres=" + genres +
+                ", writers=" + writers +
+                ", publisher=" + publisher +
+                ", id=" + id +
+                ", name='" + name + '\'' +
+                ", price=" + price +
+                '}';
     }
 }

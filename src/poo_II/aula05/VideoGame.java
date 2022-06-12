@@ -38,4 +38,16 @@ public class VideoGame extends Item{
     public void setGenres(List<GameGenre> genres) {
         this.genres = genres;
     }
+
+    @Override
+    public String toString() {
+        return "VideoGame{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", price=" + price +
+                ", distributor=" + distributor +
+                ", studio=" + studio +
+                ", genres=" + genres +
+                '}';
+    }
 }
